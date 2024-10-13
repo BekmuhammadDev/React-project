@@ -14,10 +14,6 @@ import AboutCardimg5 from "../assets/profile/AboutCardimg5.png"
 import AboutCardimg6 from "../assets/profile/AboutCardimg6.png"
 
 
-
-
-
-
 export const items = [
     { id: 1, title: 'Design with real data', content: 'Just type what\'s on your mind and we\'ll get you there.' },
     { id: 2, title: 'Start working faster today', content: 'Rename files and more. All without opening a single tab.' },

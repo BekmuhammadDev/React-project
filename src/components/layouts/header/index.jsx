@@ -4,12 +4,12 @@ import { Button } from "antd";
 import { Link } from 'react-router-dom';
 import { FaBell } from "react-icons/fa";
 import Profile from "../../../assets/profile/ProfileImgNov.png"
+import AssisAi from "../../../assets/icons/assistai.jpg"
 const index = () => {
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     useEffect(() => {
-        // LocalStorage-dan tokenni olish
         const token = localStorage.getItem('token');
 
         if (token) {
@@ -17,13 +17,28 @@ const index = () => {
         }
     }, []);
 
+    // ///////////////////////////////////////////
+    const [profileImage, setProfileImage] = useState(null);
+
+    // Sahifa yuklanganda localStorage'dan suratni olish
+    useEffect(() => {
+        const savedImage = localStorage.getItem('profileImage');
+        if (savedImage) {
+            setProfileImage(savedImage); // Saqlangan suratni yuklash
+        }
+    }, []);
+
+
+
     return (
         <header>
             <div className="container mx-auto max-w-[1440px]">
-                <div className='flex justify-between py-[50px] px-5 gap-x-[151px] items-center '>
-                    <h1 className='text-2xl font-normal'>Web designer virtual assistant</h1>
+                <div className='flex justify-between py-[50px] px-5  items-center '>
+                    <div className='justify-start'>
+                        <Link to="/"> <img src={AssisAi} alt="#" width={100} height={20} className='rounded-[50%]' /></Link>
+                    </div>
 
-                    <div className='flex gap-[54px]'>
+                    <div className='flex gap-[127px]'>
                         <ul className='flex gap-10 items-center'>
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/product">Product</Link></li>
@@ -37,8 +52,15 @@ const index = () => {
                         {isLoggedIn ? (
                             <>
                                 <div className='flex items-center gap-[70px] ml-2'>
-                                    <Link href="/"><FaBell size={39} color='#BDBDBD' /></Link>
-                                    <Link href="./ProfileSetting"><img src={Profile} alt="#" /></Link>
+                                    <Link to="/"><FaBell size={39} color='#BDBDBD' /></Link>
+                                    <Link to="/ProfileSetting">
+                                
+                                {profileImage ? (
+                                    <img src={profileImage} alt="Profile" width="88" height="88" className='rounded-[50%]' />
+                                ) : (
+                                    <img src={Profile} alt="Profile" width="88" height="88" className='rounded-[50%]' />
+                                )}
+                            </Link>
                                 </div>
                             </>
                         ) : (
@@ -58,11 +80,6 @@ const index = () => {
 
 
                     </div>
-
-
-
-
-
 
 
                 </div>

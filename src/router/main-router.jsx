@@ -1,18 +1,21 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, About, Contact, Pricing, Product,Error,Legal,Help,SettingsProfile } from "@pages";
-import { Register,AuthLayout } from "@/layout";
+import { Home, About, Contact, Pricing, Product,Error,Legal,Help,SettingsProfile,ProfileSave,CreateWebPage } from "@pages";
+import { Register,AuthLayout,MainLayout } from "@/layout";
 export const router = createBrowserRouter([
     {
         path: "/",
+        // element: <MainLayout />,
         children: [
-            
-            { path: "/register", element: <Register /> },
             { path: "/", element: <Home /> },
+            { path: "/register", element: <Register /> },
+            { path: "/mainLayout", element: <MainLayout /> },            
             { path: "/product", element: <Product /> }, 
             { path: "/pricing", element: <Pricing /> }, 
             { path: "/about", element: <About /> },
             { path: "/contact", element: <Contact /> },
             { path: "/ProfileSetting", element: <SettingsProfile /> },
+            { path: "/profilesave", element: <ProfileSave /> },
+            { path: "/create", element: <CreateWebPage /> },
             { path: "/legal", element: <Legal /> },
             { path: "/help", element: <Help /> }
 
