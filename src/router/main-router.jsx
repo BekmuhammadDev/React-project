@@ -1,14 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, About, Contact, Pricing, Product,Error,Legal,Help,SettingsProfile,ProfileSave,CreateWebPage } from "@pages";
-import { Register,AuthLayout,MainLayout } from "@/layout";
+import { Home, About, Contact, Pricing, Product,Error,Legal,Help,SettingsProfile,ProfileSave,CreateWebPage,Register } from "@pages";
+import { AuthLayout,MainLayout } from "@/layout";
 export const router = createBrowserRouter([
     {
         path: "/",
         // element: <MainLayout />,
         children: [
             { path: "/", element: <Home /> },
-            { path: "/register", element: <Register /> },
-            { path: "/mainLayout", element: <MainLayout /> },            
+            { path: "/mainLayout", element: <MainLayout /> },     
+            {path: "/register",element: <Register />},       
             { path: "/product", element: <Product /> }, 
             { path: "/pricing", element: <Pricing /> }, 
             { path: "/about", element: <About /> },
@@ -22,6 +22,7 @@ export const router = createBrowserRouter([
 
         ]
     },
+   
     {
         path: "/auth-layout",
         element: <AuthLayout />

@@ -1,5 +1,5 @@
 import React from 'react';
-import FooterIcon from "../../../assets/icons/footer-logo.svg"
+import AssisAi from "../../../assets/icons/assistai.jpg"
 import TwitterIcon from "../../../assets/icons/twitter.svg"
 import facebookIcon from "../../../assets/icons/facebook.svg"
 import linkedinIcon from "../../../assets/icons/linkedin.svg"
@@ -10,7 +10,15 @@ const index = () => {
             <div className="container mx-auto max-w-[1440px]">
 
                 <div className='bg-[#FFFFFF] py-7 px-[115px] flex items-center justify-between'>
-                    <img src={FooterIcon} alt="#" />
+                    <div className='w-20 h-20 '>
+                    <img 
+                     src={AssisAi}
+                     alt="#"
+                     width={186}
+                     height={58}
+                     className='rounded-[30%]'
+                     />
+                    </div>
                     <div className='flex gap-6'>
                         <a href="#"><img src={TwitterIcon} width={33} height={27} alt="#" /></a>
                         <a href="#"><img src={facebookIcon} width={33} height={27} alt="#" /></a>

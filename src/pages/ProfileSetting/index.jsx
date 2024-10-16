@@ -7,7 +7,6 @@ import AvatarPng from "../../assets/profile/avatar.png"
 
 const ProfileSetting = () => {
 
-
     // /////////////// rasm yuklash //////////////////////
     const [preview, setPreview] = useState(null);
 

@@ -8,7 +8,8 @@ import AssisAi from "../../../assets/icons/assistai.jpg"
 const index = () => {
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+    const [registerData, setRegisterData] = useState(false);
+    
     useEffect(() => {
         const token = localStorage.getItem('token');
 
@@ -16,6 +17,13 @@ const index = () => {
             setIsLoggedIn(true);
         }
     }, []);
+
+    useEffect (()=>{
+        const RegisterData=localStorage.getItem('RegisterData');
+        if (RegisterData) {
+            setRegisterData(true)
+        }
+    },[])
 
     // ///////////////////////////////////////////
     const [profileImage, setProfileImage] = useState(null);
@@ -35,7 +43,7 @@ const index = () => {
             <div className="container mx-auto max-w-[1440px]">
                 <div className='flex justify-between py-[50px] px-5  items-center '>
                     <div className='justify-start'>
-                        <Link to="/"> <img src={AssisAi} alt="#" width={100} height={20} className='rounded-[50%]' /></Link>
+                        <Link to="/"> <img src={AssisAi} alt="#" width={100} height={20} className='rounded-[30%]' /></Link>
                     </div>
 
                     <div className='flex gap-[127px]'>
@@ -49,7 +57,7 @@ const index = () => {
 
                         </ul>
 
-                        {isLoggedIn ? (
+                        { (isLoggedIn || registerData ) ? (
                             <>
                                 <div className='flex items-center gap-[70px] ml-2'>
                                     <Link to="/"><FaBell size={39} color='#BDBDBD' /></Link>
