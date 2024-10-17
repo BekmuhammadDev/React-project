@@ -5,32 +5,22 @@ import ProfileIcon from "../../assets/profile/bexruz.svg"
 import { BsGrid } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 import { MainCard } from '@/components/ui';
-import { Input, Button, InputGroup, InputLeftElement, Stack, Select, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
+import { Input, Button, InputGroup, InputLeftElement, Stack, Select, } from '@chakra-ui/react'
 import { SearchIcon, SmallAddIcon, ChevronDownIcon } from '@chakra-ui/icons'
+import { GoBell } from "react-icons/go";
 
 const Layout = () => {
+    
+    const [LogOpen, setLogOpen] = useState(false);
+    const loginRef = useRef(null);
 
-    // const [isOpen, setIsOpen] = useState({
-    //     organizations: false,
-    //     files: false,
-    //     lastViewed: false,
-    // });
-
-    // const toggleAccordion = (key) => {
-    //     setIsOpen((prev) => ({
-    //         ...prev,
-    //         [key]: !prev[key],
-    //     }));
-    // };
-
-
-
-
+    const toggleMenu = () => {
+        setLogOpen(!LogOpen);
+    };
 
 
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef();
-    const loginRef = useRef();
 
     // Function to open and close the menu on hover
     const handleMouseEnter = () => setIsOpen(true);
@@ -62,12 +52,12 @@ const Layout = () => {
 
                 <div className=" pr-[26px] ">
 
-                    <div className="flex items-center mt-5">
-                        <h1 className="text-lg font-semibold mr-4">Web designer virtual assistant</h1>
-                        <span className="text-gray-500">🔔</span>
+                    <div className="flex items-center mt-7">
+                        <h1 className="text-lg font-semibold mr-4 mb-2">Web designer virtual assistant</h1>
+                        <span className="relative text-gray-500 top-2  -right-4"><GoBell fontSize={19} /></span>
                     </div>
 
-                    <div className=' mt-[20px]'>
+                    <div className=' mt-[25px]'>
 
                         <div className='w-[283px] h-[564px] pt-[35px] rounded-[10px] border border-[#2091F9]  bg-gradient-to-tr from-teal-300 to-blue-500'>
 
@@ -128,9 +118,11 @@ const Layout = () => {
                                     </ul>
 
                                     <div className="flex justify-center mt-4">
-                                        <button className="w-[200px] h-[64px] bg-white text-[#2091F9] font-bold rounded-[10px] hover:bg-slate-100">
-                                            Order Now
-                                        </button>
+                                        <Link to=''>
+                                            <button className="w-[200px] h-[64px] bg-white text-[#2091F9] font-bold rounded-[10px] hover:bg-slate-100">
+                                                Order Now
+                                            </button>
+                                        </Link>
                                     </div>
                                 </div>
 
@@ -150,39 +142,38 @@ const Layout = () => {
                 <div className="flex-1 ">
 
                     <div className="flex  justify-between items-center mt-[25px] pl-[14px] pr-10 py-[10px] gap-x-20 border-b-8 border-l-2">
-                       
-                        <Stack direction="row" spacing={4} ref={loginRef}>
-                                <Button
-                                leftIcon={<img src={ProfileIcon} alt="#" />}
-                                    rightIcon={<ChevronDownIcon boxSize={4} />}
-                                    h="31px"
-                                    w="119px"
-                                    fontSize='10px'
-                                    fontWeight={600}
-                                    bg="white"
-                                    color="black"
-                                    onFocus={() => setIsOpen(true)}  // Focusda menyuni ochish
-                                    onBlur={() => setIsOpen(false)}  // Fokusni yo'qotganda menyuni yopish
-                                >
-                                  BehruzPRO
-                                </Button>
 
-                                {isOpen && (
-                                    <div className="absolute bg-[#ffff] z-10 border rounded mt-8 p-2">
-                                        <ul>
-                                            <li className="hover:bg-indigo-500 hover:text-white p-2 rounded cursor-pointer">
-                                                <a href="#">create new</a>
-                                            </li>
-                                            <li className="hover:bg-indigo-500 hover:text-white p-2 rounded cursor-pointer">
-                                                <a href="#">create new 2</a>
-                                            </li>
-                                            <li className="hover:bg-indigo-500 hover:text-white p-2 rounded cursor-pointer">
-                                                <a href="#">create new 3</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                )}
-                            </Stack>
+                        <Stack direction="row" spacing={4} ref={loginRef}>
+                            <Button
+                                leftIcon={<img src={ProfileIcon} alt="Profile" />}
+                                rightIcon={<ChevronDownIcon boxSize={4} />}
+                                h="31px"
+                                w="119px"
+                                fontSize="10px"
+                                fontWeight={600}
+                                bg="white"
+                                color="black"
+                                onClick={toggleMenu}  // Toggle menu on click
+                            >
+                                BehruzPRO
+                            </Button>
+
+                            {LogOpen && (
+                                <div className="absolute bg-white z-10 border rounded mt-8 p-2">
+                                    <ul>
+                                        <li className="hover:bg-indigo-500 hover:text-white p-2 rounded cursor-pointer">
+                                            <a href="#">Login acount</a>
+                                        </li>
+                                        <li className="hover:bg-indigo-500 hover:text-white p-2 rounded cursor-pointer">
+                                            <a href="#">Login acount</a>
+                                        </li>
+                                        <li className="hover:bg-indigo-500 hover:text-white p-2 rounded cursor-pointer">
+                                            <a href="#">Login acount</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            )}
+                        </Stack>
 
 
                         <div>
@@ -205,36 +196,22 @@ const Layout = () => {
                             </InputGroup>
 
                             <Stack direction="row" spacing={4} ref={menuRef}>
-                                <Button
-                                    leftIcon={<SmallAddIcon boxSize={4} />}
-                                    rightIcon={<ChevronDownIcon boxSize={4} />}
-                                    h="32px"
-                                    w="114px"
-                                    fontSize='9px'
-                                    bg="#0C98FF"
-                                    color="white"
-                                    _hover={{ bg: "#007ACC" }}
-                                    onFocus={() => setIsOpen(true)}  // Focusda menyuni ochish
-                                    onBlur={() => setIsOpen(false)}  // Fokusni yo'qotganda menyuni yopish
-                                >
-                                    Create new
-                                </Button>
-
-                                {isOpen && (
-                                    <div className="absolute bg-[#ffff] z-10 border rounded mt-8 p-2">
-                                        <ul>
-                                            <li className="hover:bg-indigo-500 hover:text-white p-2 rounded cursor-pointer">
-                                                <a href="#">create new</a>
-                                            </li>
-                                            <li className="hover:bg-indigo-500 hover:text-white p-2 rounded cursor-pointer">
-                                                <a href="#">create new 2</a>
-                                            </li>
-                                            <li className="hover:bg-indigo-500 hover:text-white p-2 rounded cursor-pointer">
-                                                <a href="#">create new 3</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                )}
+                                <Link to="/creatStart">
+                                    <Button
+                                        leftIcon={<SmallAddIcon boxSize={4} />}
+                                        rightIcon={<ChevronDownIcon boxSize={4} />}
+                                        h="32px"
+                                        w="114px"
+                                        fontSize='9px'
+                                        bg="#0C98FF"
+                                        color="white"
+                                        _hover={{ bg: "#007ACC" }}
+                                        onFocus={() => setIsOpen(true)}  // Focusda menyuni ochish
+                                        onBlur={() => setIsOpen(false)}  // Fokusni yo'qotganda menyuni yopish
+                                    >
+                                        Create new
+                                    </Button>
+                                </Link>
                             </Stack>
                         </div>
 
@@ -248,22 +225,22 @@ const Layout = () => {
                             Recently viewed
                         </button>
 
-                       
+
                         <div className="flex items-center text-gray-600">
                             <h1>All</h1>
-                             <Select placeholder='organizations' fontSize='9px' fontWeight={600} border='none' _hover={{ border: "none" }} focusBorderColor="transparent">
+                            <Select placeholder='organizations' fontSize='9px' fontWeight={600} border='none' _hover={{ border: "none" }} focusBorderColor="transparent">
                                 <option value='option1'>Option 1</option>
                                 <option value='option2'>Option 2</option>
                                 <option value='option3'>Option 3</option>
                             </Select>
 
-                            <Select placeholder='All files'  fontSize='9px' fontWeight={600} border='none' _hover={{border:'none'}} focusBorderColor="transparent">
+                            <Select placeholder='All files' fontSize='9px' fontWeight={600} border='none' _hover={{ border: 'none' }} focusBorderColor="transparent">
                                 <option value='option1'>Option 1</option>
                                 <option value='option2'>Option 2</option>
                                 <option value='option3'>Option 3</option>
                             </Select>
 
-                            <Select placeholder='Last viewed'  fontSize='9px' fontWeight={600} border='none' _hover={{border:'none'}} focusBorderColor="transparent">
+                            <Select placeholder='Last viewed' fontSize='9px' fontWeight={600} border='none' _hover={{ border: 'none' }} focusBorderColor="transparent">
                                 <option value='option1'>Option 1</option>
                                 <option value='option2'>Option 2</option>
                                 <option value='option3'>Option 3</option>

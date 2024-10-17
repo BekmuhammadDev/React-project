@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Header, Footer } from '@/components/layouts';
 import { Button, Stack } from '@chakra-ui/react'
-import { ChevronLeftIcon, ChevronRightIcon, WarningIcon } from '@chakra-ui/icons'
+import { ChevronLeftIcon, ChevronRightIcon, } from '@chakra-ui/icons'
 import AvatarPng from "../../assets/profile/avatar.png"
 
 const ProfileSetting = () => {

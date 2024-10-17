@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { ChevronRightIcon, CheckCircleIcon } from '@chakra-ui/icons'
-import { Header } from '@/components/layouts';
+import { Header} from '@/components/layouts';
 import { Button, Stack } from '@chakra-ui/react'
 
 
@@ -65,12 +65,11 @@ const ProfileSavePage = () => {
         <>
             <Header />
             <main>
-                
                 <section>
                     <div className="container mx-auto max-w-[1440px]">
-                        <div className='py-[120px] bg-[#FAFAFA]'>
+                        <div className='py-[35px]'>
                             <h2 className='text-2xl text-[#737373] font-bold text-center '>USER</h2>
-                            <h1 className='text-[58px] font-extrabold  text-[#252B42] text-center  bg-gradient-to-r from-orange-600 to-indigo-500 bg-clip-text text-transparent'>Create Your Website</h1>
+                            <h1 className='text-[58px] font-extrabold  text-[#252B42] text-center  bg-gradient-to-r from-orange-600 to-indigo-500 bg-clip-text text-transparent'>Create Your Logo</h1>
 
                         </div>
                     </div>
@@ -79,27 +78,28 @@ const ProfileSavePage = () => {
                 <section>
                     <div className="container mx-auto max-w-[1440px]">
                         <div className='flex justify-center'>
-                            <div className='mt-[86px]'>
+                            <div className='mt-[40px]'>
 
                                 <div>
-                                    <label className='text-base font-medium' htmlFor="firstName">Site Name</label>
+                                    <label className='text-base font-medium' htmlFor="firstName">Company Name</label>
                                     <div className="flex gap-[26px]">
                                         <input
                                             id='SiteName'
                                             type="text"
                                             name="Site Name"
-                                            placeholder="Figma"
-                                            className="block w-[357px] h-[54px] rounded-[10px] mt-2 p-5 mb-[30px] border-2 border-[#E8E8E8] text-[#B0B0B0]"
+                                            placeholder="Graphic Design"
+                                           
+                                            className="block w-[357px] h-[54px] rounded-[10px] mt-2 p-5 mb-[30px] border-2 border-[#E8E8E8]"
                                         />
                                         <CheckCircleIcon boxSize={10} color='#2187FF' mt='15px' />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label htmlFor="siteType" className='text-base font-medium'>Selected site type:</label>
+                                    <label htmlFor="siteType" className='text-base font-medium'>Selected logo type:</label>
                                     <div className="flex gap-[26px]">
                                         <select id="siteType" value={selectedType} onChange={handleTypeChange} className="block text-[#B0B0B0] w-[357px] h-[54px] rounded-[10px] mt-2 px-5 mb-[30px] border-2 border-[#E8E8E8]" >
-                                            <option value="">Figma</option>
+                                            <option value="">Minimalistic</option>
                                             {siteTypes.map((type, index) => (
                                                 <option key={index} value={type}>
                                                     {type}
@@ -115,7 +115,7 @@ const ProfileSavePage = () => {
                                     <label htmlFor="siteColor" className='text-base font-medium'>Selected site colour:</label>
                                     <div className="flex gap-[26px]">
                                         <select id="siteColor" value={selectedColor} onChange={handleColorChange} className="block text-[#B0B0B0] w-[357px] h-[54px] rounded-[10px] mt-2 px-5 mb-[30px] border-2 border-[#E8E8E8]">
-                                            <option>Figma</option>
+                                            <option>Red</option>
                                             {siteColors.map((color, index) => (
                                                 <option key={index} value={color}>
                                                     {color}
@@ -135,20 +135,18 @@ const ProfileSavePage = () => {
                                             name="Slogan"
                                             placeholder="Figma"
                                            
-                                            className="block w-[357px] h-[54px] rounded-[10px] mt-2 p-5 mb-[30px] border-2 border-[#E8E8E8] text-[#B0B0B0]"
+                                            className="block w-[357px] h-[54px] rounded-[10px] mt-2 p-5 mb-[30px] border-2 border-[#E8E8E8]"
                                         />
                                         <CheckCircleIcon boxSize={10} color='#2187FF' mt='15px' />
                                     </div>
                                 </div>
 
-                                <div className='flex justify-center mt-[150px] mb-[74px]'>
+                                <div className='flex justify-center mt-[46px] mb-[74px]'>
                                     <Stack direction='row' spacing={4}>
 
-                                        <Link to='/CardUntiteld'>
-                                            <Button rightIcon={<ChevronRightIcon boxSize={8} />} colorScheme='blue' w='145px' h='60px' fontSize={16} fontWeight='bold'>
-                                                Create
-                                            </Button>
-                                        </Link>
+                                        <Link to='/CardUntiteld'><Button rightIcon={<ChevronRightIcon boxSize={8} />} colorScheme='blue' w='145px' h='60px' fontSize={16} fontWeight='bold'>
+                                            Create
+                                        </Button></Link>
                                     </Stack>
                                 </div>
 

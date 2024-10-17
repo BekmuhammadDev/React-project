@@ -10,5 +10,8 @@ import SettingsProfile from "./ProfileSetting"
 import ProfileSave from "./profileSave"
 import CreateWebPage from "./createWebPage"
 import Register from "./register"
+import CretStart from "./creatStart"
+import CreatLogo from "./creatLogo"
+import CardUntiteld from './CardUntiteld'
 
-export { Home, About, Contact, Pricing, Product,Legal,Help,Error,SettingsProfile,ProfileSave,CreateWebPage,Register }
+export { Home, About, Contact, Pricing, Product,Legal,Help,Error,CretStart,SettingsProfile,ProfileSave,CreateWebPage,Register,CreatLogo,CardUntiteld }

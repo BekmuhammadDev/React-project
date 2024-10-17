@@ -1,13 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, About, Contact, Pricing, Product,Error,Legal,Help,SettingsProfile,ProfileSave,CreateWebPage,Register } from "@pages";
+import { Home, About, Contact, Pricing, Product,Error,Legal,Help,SettingsProfile,ProfileSave,CreateWebPage,Register,CretStart,CreatLogo,CardUntiteld } from "@pages";
 import { AuthLayout,MainLayout } from "@/layout";
 export const router = createBrowserRouter([
     {
         path: "/",
         // element: <MainLayout />,
         children: [
-            { path: "/", element: <Home /> },
-            { path: "/mainLayout", element: <MainLayout /> },     
+            { path: "/home", element: <Home /> },
+            { path: "/", element: <MainLayout /> },     
             {path: "/register",element: <Register />},       
             { path: "/product", element: <Product /> }, 
             { path: "/pricing", element: <Pricing /> }, 
@@ -15,7 +15,10 @@ export const router = createBrowserRouter([
             { path: "/contact", element: <Contact /> },
             { path: "/ProfileSetting", element: <SettingsProfile /> },
             { path: "/profilesave", element: <ProfileSave /> },
-            { path: "/create", element: <CreateWebPage /> },
+            { path: "/createWebPage", element: <CreateWebPage /> },
+            { path: "/creatLogo", element: <CreatLogo /> },
+            { path: "/CardUntiteld", element: <CardUntiteld /> },
+            { path: "/creatStart", element: <CretStart /> },
             { path: "/legal", element: <Legal /> },
             { path: "/help", element: <Help /> }
 
