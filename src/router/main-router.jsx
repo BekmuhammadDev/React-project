@@ -6,8 +6,8 @@ export const router = createBrowserRouter([
         path: "/",
         // element: <MainLayout />,
         children: [
-            { path: "/home", element: <Home /> },
-            { path: "/", element: <MainLayout /> },     
+            { path: "/", element: <Home /> },
+            { path: "/mainLayout", element: <MainLayout /> },     
             {path: "/register",element: <Register />},       
             { path: "/product", element: <Product /> }, 
             { path: "/pricing", element: <Pricing /> }, 
