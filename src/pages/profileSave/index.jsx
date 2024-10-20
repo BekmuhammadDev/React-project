@@ -2,6 +2,7 @@ import React from 'react';
 import { Header, Footer } from '@/components/layouts';
 import { Button, ButtonGroup } from '@chakra-ui/react'
 import ProfileSave from "../../assets/img/ProfileSaveImg.png"
+import { Link } from 'react-router-dom';
 
 const ProfileSavePage = () => {
 
@@ -34,7 +35,7 @@ const ProfileSavePage = () => {
                         </div>
 
                         <div className='flex justify-center mt-[87px] mb-[74px]'>
-                           <a href="/mainLayout"> <Button colorScheme='blue' w={236} h={68}>Thanks</Button></a>
+                           <Link to="/mainLayout"> <Button colorScheme='blue' w={236} h={68}>Thanks</Button></Link>
                         </div>
 
 
