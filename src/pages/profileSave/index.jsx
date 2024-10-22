@@ -35,7 +35,7 @@ const ProfileSavePage = () => {
                         </div>
 
                         <div className='flex justify-center mt-[87px] mb-[74px]'>
-                           <Link to="/mainLayout"> <Button colorScheme='blue' w={236} h={68}>Thanks</Button></Link>
+                            <Link to="/mainLayout"> <Button colorScheme='blue' w={236} h={68}>Thanks</Button></Link>
                         </div>
 
 

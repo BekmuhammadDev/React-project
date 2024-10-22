@@ -1,0 +1,17 @@
+.bgimg {
+    background-image: url(../../../../assets/img/bgIMg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* backgroundni barcha elementlar orqasiga o'tkazish uchun */
+}
+
+@media (max-width: 414px) {
+    .bgimg {
+        background-size: cover; /* Kichik ekranlar uchun moslashtirish */
+    }
+}
