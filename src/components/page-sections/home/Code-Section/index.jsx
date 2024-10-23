@@ -6,10 +6,10 @@ const index = () => {
     return (
         <section>
             <div className="container mx-auto max-w-[1440px]">
-                <div className='md:flex md:justify-center gap-x-[84px] items-center text-center md:mt-[300px]'>
+                <div className='md:flex md:justify-center md:text-left gap-x-[84px] items-center text-center md:mt-[300px]'>
 
                     <div className='p-10'>
-                        <h1 className='text-2xl font-bold text-[#2091F9] mb-10  md:mb-[17px]'>CODE</h1>
+                        <h1 className='text-2xl ml-7  font-bold text-[#2091F9] mb-10  md:mb-[17px]'>CODE</h1>
                         <h1 className='text-[40px] font-bold text-[#252B42] px-5 mb-10 md:mb-[17px]'>Used for adding notices</h1>
                         <p className='text-2xl font-medium text-[#737373] px-9'>Most calendars are designed for <br /> teams. Slate is designed for <br /> freelancers</p>
                     </div>

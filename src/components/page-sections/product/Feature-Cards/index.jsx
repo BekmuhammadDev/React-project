@@ -7,7 +7,7 @@ const index = () => {
         <section>
             <div className="container mx-auto max-w-[1440px]">
 
-                <div className='py-[160px] flex justify-center items-center gap-[52px] '>
+                <div className='flex flex-col pt-[140px] md:py-[160px] md:flex-row justify-center items-center gap-[52px] '>
 
                     <div className='w-[294px] h-[160px]'>
                         <div className='flex text-2xl font-bold text-[#252B42] items-center gap-[20px] mb-[10px]'>
@@ -46,8 +46,6 @@ const index = () => {
                                 reach your financial goal.</p>
                         </div>
                     </div>
-
-
                 </div>
 
                 <div className='flex justify-center items-center'>

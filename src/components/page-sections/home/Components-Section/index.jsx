@@ -6,7 +6,7 @@ const index = () => {
   return (
     <section>
       <div className="containercontainer mx-auto max-w-[1440px]">
-        <div className='md:flex md:justify-center gap-x-[84px] items-center text-center md:mt-[300px]'>
+        <div className='md:flex md:justify-center gap-x-[84px] md:text-left items-center text-center md:mt-[300px]'>
 
           <div className=' hidden md:flex relative right-20'>
             <img src={mackbook3} alt="#" />
