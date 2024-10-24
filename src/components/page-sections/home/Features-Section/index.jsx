@@ -33,7 +33,7 @@ const FeaturesSection = () => {
       <div className="container mx-auto max-w-[1440px]">
 
         <div className='pt-[160px]'>
-          <h1 className='text-center text-[40px] font-bold text-[#252B42] mb-4'>AMAZING FEATURES</h1>
+          <h1 className='text-center text-[40px] font-bold text-[#252B42] mb-4'>AMAZING <br className='md:hidden'/> FEATURES</h1>
           <p className='text-center text-2xl font-medium text-[#737373]'>Most calendars are <br className='md:hidden'/> designed for teams. <span className='hidden md:inline'> <br />
           Slate is designed for freelancers</span></p>
           <div>

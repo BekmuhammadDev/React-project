@@ -51,8 +51,9 @@ const Index = () => {
     return (
         <header className={`${headerBgColor} md:bg-white`}>
             <div className="container mx-auto max-w-[414px] md:max-w-[1440px]">
-                <div className='flex justify-between py-4 px-5 items-center'>
-                    {/* Logo */}
+
+                <div className='flex justify-center gap-x-80 py-4 px-5 items-center'>
+
                     <div className=' flex justify-start'>
                         <Link to="/">
                             <img src={AssisAi} alt="Logo" width={80} height={20} className='rounded-[30%]' />
@@ -65,7 +66,7 @@ const Index = () => {
                     </div>
 
                     {/* Links and User Section */}
-                    <div className='hidden md:flex items-center gap-10'>
+                    <div className='hidden md:flex gap-30 items-center'>
                         <ul className='flex gap-10 items-center'>
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/product">Product</Link></li>
@@ -76,13 +77,13 @@ const Index = () => {
                         </ul>
 
                         {(isLoggedIn || registerData) ? (
-                            <div className='flex items-center gap-4'>
-                                <Link to="/"><FaBell size={30} color='#BDBDBD' /></Link>
+                            <div className='flex items-center gap-[71px] ml-32'>
+                                <Link to="/"><FaBell size={39} color='#BDBDBD' /></Link>
                                 <Link to="/ProfileSetting">
                                     {profileImage ? (
-                                        <img src={profileImage} alt="Profile" width="50" height="50" className='rounded-[50%]' />
+                                        <img src={profileImage} alt="Profile" width="88" height="88" className='rounded-[50%]' />
                                     ) : (
-                                        <img src={Profile} alt="Profile" width="50" height="50" className='rounded-[50%]' />
+                                        <img src={Profile} alt="Profile" width="88" height="88" className='rounded-[50%]' />
                                     )}
                                 </Link>
                             </div>
@@ -98,6 +99,7 @@ const Index = () => {
                                 </Link>
                             </div>
                         )}
+
                     </div>
 
                     {/* Drawer for small screens */}
