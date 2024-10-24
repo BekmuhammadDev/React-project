@@ -6,11 +6,11 @@ const index = () => {
     const [isYearly, setIsYearly] = useState(false);
 
     const handleYearlyClick = () => {
-      setIsYearly(true);
+        setIsYearly(true);
     };
-  
+
     const handleMonthlyClick = () => {
-      setIsYearly(false);
+        setIsYearly(false);
     };
 
     return (
@@ -21,15 +21,14 @@ const index = () => {
 
                     <div className='flex justify-center items-center'>
 
-                        <div className=' w-[334px] h-[48px] rounded-sm'>
+                        <div className=' w-[334px] h-[48px] '>
 
                             <Button onClick={handleMonthlyClick}
-                                className={` w-[131px] h-[48px] font-bold rounded-none border ${isYearly ? 'bg-[#EEEEEE] border-[#E9E9E9] text-[#D1D1D1] border-2' : ' text-[#2091F9] border-gray'
+                                className={` w-[131px] h-[48px] font-bold rounded-l-md rounded-r-none border ${isYearly ? 'bg-[#EEEEEE] border-[#E9E9E9] text-[#D1D1D1] border-2' : ' text-[#2091F9] border-gray'
                                     }`}>Monthly</Button>
 
-
                             <Button onClick={handleYearlyClick}
-                                className={` ${isYearly ? 'w-[105px] h-[48px]' : 'w-[203px] h-[48px]'} font-bold rounded-none border ${isYearly ? 'bg-[#1A9CF1] text-white rounded-sm' : 'bg-gray-100 text-[#2091F9] border-gray'
+                                className={` ${isYearly ? 'w-[105px] h-[48px] rounded-r-md rounded-l-none' : 'w-[203px] h-[48px]'} font-bold rounded-none border ${isYearly ? 'bg-[#1A9CF1] text-white ' : 'bg-gray-100 text-[#2091F9] border-gray rounded-r-md rounded-l-none'
                                     }`}
                             > {isYearly ? 'Yearly' : 'Yearly ( save 20% )'}</Button>
                         </div>
@@ -39,7 +38,7 @@ const index = () => {
                     <div className='flex justify-center items-center gap-[50px] mt-[60px]'>
 
                         {!isYearly && (
-                            <div className='w-[400px] h-[861px] rounded-[10px] border border-[#2091F9] p-10 shadow-md'>
+                            <div className='w-[343px] md:w-[400px] h-[861px] rounded-[10px] border border-[#2091F9] p-10 shadow-md'>
 
                                 <div className='py-[30px] '>
                                     <h1 className='text-2xl font-bold text-[#252B42] text-center mb-[16px]'>FREE</h1>
@@ -55,7 +54,7 @@ const index = () => {
                                     </div>
                                 </div>
 
-                                <div className='flex justify-center items-center'>
+                                <div className='flex justify-center items-center '>
                                     <div className="w-[277px] h-[364px]  border-blue-300">
 
                                         <ul className='mb-[67px]'>
@@ -107,7 +106,7 @@ const index = () => {
                         )}
 
 
-                        <div className={`${isYearly ? 'w-[750px] h-[861px]' : 'w-[450px] h-[861px]'} pt-[40px] rounded-[10px] border border-[#2091F9]  bg-gradient-to-tr from-teal-300 to-blue-500`}>
+                        <div className={`${isYearly ? ' w-[343px] md:w-[750px] h-[861px]' : 'w-[450px] h-[861px] hidden md:block'} pt-[40px] rounded-[10px] border border-[#2091F9]  bg-gradient-to-tr from-teal-300 to-blue-500`}>
 
                             <div className='flex justify-center items-center mt-[20px]'>
                                 <div className='w-[238px] h-[166px]'>

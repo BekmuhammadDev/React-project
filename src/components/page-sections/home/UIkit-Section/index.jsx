@@ -12,9 +12,9 @@ const index = () => {
   
         <div className='p-10'>
           <h1 className='text-2xl font-bold text-[#2091F9] mb-[17px]'>UI KIT</h1>
-          <h1 className='text-[40px] font-bold px-3 md:px-0 text-[#252B42] mb-12 md:mb-[17px]'>Headings, body and other <br />
+          <h1 className='text-[40px] font-bold px-2 md:px-0 text-[#252B42] mb-12 md:mb-[17px]'>Headings, <br className='md:hidden'/> body and other <br/>
             common text elements</h1>
-          <p className='text-2xl px-2 md:px-0 font-medium text-[#737373]'>Most calendars are designed for <br/> teams. Slate is designed for <br /> freelancers</p>
+          <p className='text-2xl px-10 md:px-0 font-medium text-[#737373]'>Most calendars are designed for <br className='hidden md:flex'/> teams. Slate is designed for <br /> freelancers</p>
         </div>
   
         <div className=' hidden md:flex relative left-20 mt-10'>

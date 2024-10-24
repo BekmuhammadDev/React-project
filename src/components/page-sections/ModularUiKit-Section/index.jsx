@@ -8,7 +8,7 @@ const index = () => {
                 <div className=' py-[130px] px-16'>
                     <h1 className='text-center text-white text-[40px] font-bold mt-[10px]'>A modular <br className='md:hidden' /> UI Kit</h1>
                     <p className='text-center text-[#BDBDBD] text-[24px] font-medium'>Most calendars are designed for teams. <br />
-                        <span className='md:inline-block hidden'>Slate is designed for freelancers</span></p>
+                        <span className='hidden md:inline '>Slate is designed for freelancers</span></p>
 
                     <div className='flex justify-center items-center gap-4 mt-12'>
                         <Button type="primary" className='w-[137px] h-[64px] rounded-[10px] text-base font-bold'>

@@ -12,8 +12,8 @@ const HeroSection = () => {
           Lightning fast prototyping
         </h1>
         <p className='text-center text-2xl font-medium text-white mb-[65px] md:mb-[50px]'>
-          Most calendars are designed for teams. Slate is designed <br />
-          for freelancers
+          Most calendars are <br className='md:hidden'/> designed for teams. <span className='hidden md:inline'>Slate is designed <br />
+          for freelancers</span>
         </p>
         <div className='flex justify-center items-center'>
           <Button size='large' className='w-[236px] h-[68px] text-2xl font-bold text-[#2091F9]'>Try For Free</Button>

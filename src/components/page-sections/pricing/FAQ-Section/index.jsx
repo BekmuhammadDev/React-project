@@ -9,10 +9,10 @@ const index = () => {
                 <div className='py-[160px]'>
                     <h1 className='text-center font-bold text-[40px] text-[#2091F9] mb-[60px]'>FAQ</h1>
 
-                    <div className='flex justify-center items-center'>
+                    <div className=' flex flex-col md:flex md:justify-center md:flex-row items-center'>
 
 
-                        <div className='w-[438px] h-[254px]'>
+                        <div className='w-[438px] h-[254px] mb-10 md:mb-0 p-10 md:p-0'>
                             <Accardion selectedId={1} /> <br />
                             <Accardion selectedId={2} /><br />
                             <Accardion selectedId={3} /><br />
@@ -20,7 +20,7 @@ const index = () => {
 
                         </div>
 
-                        <div className='w-[438px] h-[254px]'>
+                        <div className='w-[438px] h-[254px] p-10 md:p-0'>
                             <Accardion selectedId={5} /><br />
                             <Accardion selectedId={6} /><br />
                             <Accardion selectedId={7} /><br />

@@ -11,7 +11,7 @@ const index = () => {
                     <div className='p-10'>
                         <h1 className='text-2xl ml-7  font-bold text-[#2091F9] mb-10  md:mb-[17px]'>CODE</h1>
                         <h1 className='text-[40px] font-bold text-[#252B42] px-5 mb-10 md:mb-[17px]'>Used for adding notices</h1>
-                        <p className='text-2xl font-medium text-[#737373] px-9'>Most calendars are designed for <br /> teams. Slate is designed for <br /> freelancers</p>
+                        <p className='text-2xl font-medium text-[#737373] px-9'>Most calendars are designed for <br className='hidden md:flex'/> teams. Slate is designed for <br /> freelancers</p>
                     </div>
 
                     <div className=' hidden md:flex relative left-20'>

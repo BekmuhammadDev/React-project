@@ -10,7 +10,7 @@ const index = () => {
         <section className='bg-[#F4F4F4]'>
             <div className="container mx-auto max-w-[1440px]">
 
-                <div className='py-[160px] flex justify-center items-center gap-[52px] '>
+                <div className='flex flex-col py-[160px] md:flex md:justify-center md:flex-row items-center gap-[52px] '>
 
                     <div className='w-[294px] h-[160px]'>
                         <div className='flex text-2xl font-bold text-[#252B42] items-center gap-[20px] mb-[10px]'>
